@@ -22,7 +22,6 @@ public class HomeController {
 
 	@RequestMapping(value="main.home", method= RequestMethod.GET)
 	public String home(HttpSession session) {
-		session.setAttribute("a", "Home controller");
 		// /WEB-INF/views/home.jsp
 		// forward 방식으로 view 화면 처리
 		return "home";
