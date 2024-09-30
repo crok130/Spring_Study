@@ -50,7 +50,8 @@
 			</c:otherwise>
 		</c:choose>
 	 | <a href="${path}/chat">CHAT</a>
-	 | <a href="${path}/board/list">게시판</a>
+	 | <a href="${path}/board/list">게시판</a> 
+	 | <a href="${path}/checkEmail">checkEmail</a>
 	</header>
 	
 	
