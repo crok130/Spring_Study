@@ -29,23 +29,7 @@ public class BoardController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 
-	/**
-	 * 페이징 처리 된 게시글 출력 페이지 param : 요청 page, perPageNum
-	 */
-	// GET : board/list
-	@GetMapping("list")
-	public String listPage(Criteria cri, Model model, HttpSession session) throws Exception {
-		List<BoardVO> list = bs.listCriteria(cri);
-		PageMaker pm = bs.getPageMaker(cri);
-		model.addAttribute("list", list);
-		model.addAttribute("pm", pm);
-		String msg = (String) session.getAttribute("msg");
-		if (msg != null) {
-			model.addAttribute("msg", msg);
-			session.removeAttribute("msg");
-		}
-		return "board/list";
-	}
+
 
 	/* "게시글 작성 페이지 요청" */
 	// board/write
